@@ -209,11 +209,11 @@ class Schema implements SchemaInterface, RefinableCacheableDependencyInterface {
    * @param string $name
    *   The name of the property to get; e.g., 'title' or 'name'.
    *
-   * @param \Drupal\Core\TypedData\DataDefinitionInterface
+   * @return \Drupal\Core\TypedData\DataDefinitionInterface
    *   The property object.
    */
   public function __get($name) {
-    $this->properties[$name] = $value;
+    return $this->properties[$name];
   }
 
 }
